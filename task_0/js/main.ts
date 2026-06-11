@@ -21,7 +21,7 @@ const student2: Student = {
 
 const studentsList: Student[] = [student1, student2];
 const table = document.createElement('table');
-document.body.appendChild(table);
+document.body!.appendChild(table);
 
 studentsList.forEach((student: Student) => {
   const row = document.createElement('tr');
