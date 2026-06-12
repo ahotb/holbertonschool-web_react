@@ -53,3 +53,18 @@ console.log(createEmployee(200));
 console.log(createEmployee(1000));
 
 console.log(createEmployee('$500'));
+
+// 6. Creating functions specific to employees
+function isDirector(employee: Teacher | Director): employee is Director {
+  return employee instanceof Director;
+}
+function executeWork(employee: Teacher | Director): string {
+  if (isDirector(employee)) {
+    return employee.workDirectorTasks();
+  } else {
+    return employee.workTeacherTasks();
+  }
+}
+
+executeWork(createEmployee(200));
+executeWork(createEmployee(1000));
