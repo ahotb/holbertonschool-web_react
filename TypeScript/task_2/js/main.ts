@@ -68,3 +68,13 @@ function executeWork(employee: Teacher | Director): string {
 
 executeWork(createEmployee(200));
 executeWork(createEmployee(1000));
+
+// 7. String literal types
+
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+  return `Teaching ${todayClass}`;
+}
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
